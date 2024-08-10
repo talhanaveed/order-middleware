@@ -25,7 +25,7 @@ node -v
 Make sure you have the AWS CDK installed. For best experience, install the CDK globally: `npm install -g aws-cdk`
 
 ### Configure appropriate options
-In the cdk.json, modify the `emailAddress` field. This will be the email address that will receive updates about the order.
+In the cdk.json, modify the `emailAddress` field. This will be the email address that will receive updates about the order. Once the CDK is deployed, you'll receive an email on this email address prompting you to confirm your subscription to receive order updates via email.  
 
 ## Deployment
 AWS infrastructure needs to be deployed and configured for the experience to function. The required code has been written using CDK and included in the repository. To deploy, perform the following steps:
@@ -78,7 +78,6 @@ https://<API>.<region>.amazonaws.com/get
 Request parameters:
 ```markdown
 - Required:`orderid` The unique identifier of your order. Two orders cannot have the same orderid
-- Optional:`status` false = order is not accepted, true = order is accepted
 ```
 In the body of your request, send the following payload:
 ```shell
