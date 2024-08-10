@@ -17,7 +17,7 @@ This project requires [Node.js](http://nodejs.org/). To make sure you have it av
 node -v
 ```
 
-For best experience we recommend installing CDK globally: `npm install -g aws-cdk`
+Make sure you have the AWS CDK installed. For best experience, install the CDK globally: `npm install -g aws-cdk`
 
 ### Configure appropriate options
 In the cdk.json, modify the email address as needed. The parameter definition is below.
@@ -30,11 +30,10 @@ AWS infrastructure needs to be deployed and configured for the experience to fun
 
 1. Perform the required steps dictated in the Prerequisites
 2. Configure your AWS credentials `aws configure`
-3. CD into the code directory
+3. CD into the **order-middleware** directory
 4. Install the required dependencies `npm install`
-5. Build the environment `npm run build`
 5. CDK bootstrap `cdk bootstrap aws://ACCOUNT-NUMBER/REGION`
-6. Deploy the application `cdk deploy --all`
+6. Deploy the application `cdk deploy`
 
 Deployment can take approximately 10 minutes. Once complete, you will need to note down the output of the CDK deployment. The output will look like this: 
 `CdkStack.HttpApiUrl = https://<API>.<region>.amazonaws.com/`
