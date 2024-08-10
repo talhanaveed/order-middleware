@@ -6,8 +6,8 @@ As a store or restaurant, having a reliable mechanism to receive orders from you
 Moreover, as your business continues to expand, it becomes necessary to integrate your order management process with third-party order aggregators to streamline operations further. To address these challenges, this project introduces a middleware solution designed to receive and process customer orders seamlessly. The system captures new order requests, stores them in a database, and updates the order status—either accepting or rejecting the orders—based on your business logic. Additionally, it ensures that customers are promptly informed of their order status via email, enhancing their overall experience.
 
 ## Architecture
-![Alt text](./architecture1.png?raw=true "Architecture")
-![Alt text](./architecture2.png?raw=true "Architecture")
+![Alt text](./architecture/architecture1.png?raw=true "Architecture")
+![Alt text](./architecture/architecture2.png?raw=true "Architecture")
 
 In order to deploy the CDK, a few actions need to be performed.
 ## Prerequisites
