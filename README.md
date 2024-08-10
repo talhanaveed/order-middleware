@@ -1,7 +1,8 @@
 # order-middleware
 This project implements the infrastructure and code needed to create a middleware hosted on AWS that can process orders on a massive scale. 
 ## Architecture
-![Alt text](./architecture.png?raw=true "Architecture")
+![Alt text](./architecture1.png?raw=true "Architecture")
+![Alt text](./architecture2.png?raw=true "Architecture")
 
 In order to deploy the CDK, a few actions first need to be performed.
 ## Prerequisites
