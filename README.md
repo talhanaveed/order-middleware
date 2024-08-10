@@ -1,5 +1,7 @@
 # order-middleware
-This project implements the infrastructure and code needed to create a middleware that can process orders on a massive scale. 
+This project implements the infrastructure and code needed to create a middleware hosted on AWS that can process orders on a massive scale. 
+## Architecture
+![Alt text](./architecture.png?raw=true "Architecture")
 
 In order to deploy the CDK, a few actions first need to be performed.
 ## Prerequisites
@@ -38,7 +40,13 @@ Deployment can take approximately 10 minutes. Once complete, you will need to no
 
 1. Navigate to the Cloud Formation console.
 2. Get the URL for the API from the Output tab of your stack deployment.
-3. Open your API testing platform like Postman.
+
+## Usage
+Open your API testing platform like Postman. The interaction with this project will be through API calls. In the payload of your API requests, two fields are **important**:
+```markdown
+- Required:`orderid` The unique identifier of your order. Two orders cannot have the same orderid
+- Required in create/update requests:`status` false = order is not accepted, true = order is accepted
+```
 
 ### Creating an order
 You need to make a **POST** call to the following URL:
