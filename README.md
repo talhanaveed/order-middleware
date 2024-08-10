@@ -1,10 +1,15 @@
 # order-middleware
-This project implements the infrastructure and code needed to create a middleware hosted on AWS that can process orders on a massive scale. 
+This project implements the infrastructure and code needed to create a middleware hosted on AWS that can process orders on a massive scale. It takes inspiration from Taco Bell's 'This is my architecture' video: https://www.youtube.com/watch?v=sezX7CSbXTg
+
+As a store or restaurant, having a reliable mechanism to receive orders from your customers and manage them according to your capacity is essential. Initially, this might involve simply accepting or rejecting orders based on what you can handle. However, as your establishment gains global popularity and the volume of incoming orders surges to thousands per minute, you need a robust system that can efficiently manage this high order volume without the hassle of constantly scaling the underlying infrastructure.
+
+Moreover, as your business continues to expand, it becomes necessary to integrate your order management process with third-party order aggregators to streamline operations further. To address these challenges, this project introduces a middleware solution designed to receive and process customer orders seamlessly. The system captures new order requests, stores them in a database, and updates the order status—either accepting or rejecting the orders—based on your business logic. Additionally, it ensures that customers are promptly informed of their order status via email, enhancing their overall experience.
+
 ## Architecture
 ![Alt text](./architecture1.png?raw=true "Architecture")
 ![Alt text](./architecture2.png?raw=true "Architecture")
 
-In order to deploy the CDK, a few actions first need to be performed.
+In order to deploy the CDK, a few actions need to be performed.
 ## Prerequisites
 ### Clone gitlab repository 
 `git clone <git url>`
