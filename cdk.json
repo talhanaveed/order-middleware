@@ -16,7 +16,7 @@
   },
   "context": {
 
-    "emailAddress": "talhag@amazon.com",
+    "emailAddress": "abc@example.com",
     "@aws-cdk/aws-lambda:recognizeLayerVersion": true,
     "@aws-cdk/core:checkSecretUsage": true,
     "@aws-cdk/core:target-partitions": [
