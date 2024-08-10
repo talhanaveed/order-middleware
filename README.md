@@ -25,11 +25,8 @@ node -v
 Make sure you have the AWS CDK installed. For best experience, install the CDK globally: `npm install -g aws-cdk`
 
 ### Configure appropriate options
-In the cdk.json, modify the email address as needed. The parameter definition is below.
+In the cdk.json, modify the `emailAddress` field. This will be the email address that will receive updates about the order.
 
-```markdown
-- Required:`emailAddress` The email address that'll subscribe to SNS topic on which the order status is updated.
-```
 ## Deployment
 AWS infrastructure needs to be deployed and configured for the experience to function. The required code has been written using CDK and included in the repository. To deploy, perform the following steps:
 
