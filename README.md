@@ -41,7 +41,7 @@ Deployment can take approximately 10 minutes. Once complete, you will need to no
 3. Open your API testing platform like Postman.
 
 ### Creating an order
-You need to make a POST call to the following URL:
+You need to make a **POST** call to the following URL:
 ```shell
 https://<API>.<region>.amazonaws.com/create
 ```
@@ -52,6 +52,32 @@ In the body of your request, send the following payload:
     "payload": {
         "orderid": "1",
         "status": false
+    }
+}"
+```
+### Get an order
+You need to make a **GET** call to the following URL:
+```shell
+https://<API>.<region>.amazonaws.com/get
+```
+In the body of your request, send the following payload:
+```shell
+"{
+    "orderid": "1"
+}"
+```
+### Update an order
+You need to make a **POST** call to the following URL:
+```shell
+https://<API>.<region>.amazonaws.com/update
+```
+In the body of your request, send the following payload:
+```shell
+"{
+    "operation": "update",
+    "payload": {
+        "orderid": "1",
+        "status": true
     }
 }"
 ```
