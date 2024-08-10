@@ -45,8 +45,8 @@ Deployment can take approximately 10 minutes. Once complete, you will need to no
 ## Usage
 Open your API testing platform like Postman. The interaction with this project will be through API calls. Remember to pass two **important** parameters in the body of your requests.
 ```markdown
-- Required:`orderid` The unique identifier of your order. Two orders cannot have the same orderid
-- Required in create/update requests:`status` false = order is not accepted, true = order is accepted
+- `orderid` The unique identifier of your order. Two orders cannot have the same orderid
+- `status` false = order is not accepted, true = order is accepted
 ```
 
 ### Creating an order
