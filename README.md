@@ -40,3 +40,18 @@ Deployment can take approximately 10 minutes. Once complete, you will need to no
 2. Get the URL for the API from the Output tab of your stack deployment.
 3. Open your API testing platform like Postman.
 
+### Creating an order
+You need to make a POST call to the following URL:
+```shell
+https://<API>.<region>.amazonaws.com/create
+```
+In the body of your request, send the following payload:
+```shell
+"{
+    "operation": "create",
+    "payload": {
+        "orderid": "1",
+        "status": false
+    }
+}"
+```
