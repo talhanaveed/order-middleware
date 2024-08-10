@@ -43,7 +43,7 @@ Deployment can take approximately 10 minutes. Once complete, you will need to no
 2. Get the URL for the API from the Output tab of your stack deployment.
 
 ## Usage
-Open your API testing platform like Postman. The interaction with this project will be through API calls. In the payload of your API requests, two fields are **important**:
+Open your API testing platform like Postman. The interaction with this project will be through API calls. Remember to pass two **important** parameters in the body of your requests.
 ```markdown
 - Required:`orderid` The unique identifier of your order. Two orders cannot have the same orderid
 - Required in create/update requests:`status` false = order is not accepted, true = order is accepted
@@ -53,6 +53,11 @@ Open your API testing platform like Postman. The interaction with this project w
 You need to make a **POST** call to the following URL:
 ```shell
 https://<API>.<region>.amazonaws.com/create
+```
+Request parameters:
+```markdown
+- Required:`orderid` The unique identifier of your order. Two orders cannot have the same orderid
+- Required:`status` false = order is not accepted, true = order is accepted
 ```
 In the body of your request, send the following payload:
 ```shell
@@ -69,6 +74,11 @@ You need to make a **GET** call to the following URL:
 ```shell
 https://<API>.<region>.amazonaws.com/get
 ```
+Request parameters:
+```markdown
+- Required:`orderid` The unique identifier of your order. Two orders cannot have the same orderid
+- Optional:`status` false = order is not accepted, true = order is accepted
+```
 In the body of your request, send the following payload:
 ```shell
 "{
@@ -79,6 +89,11 @@ In the body of your request, send the following payload:
 You need to make a **POST** call to the following URL:
 ```shell
 https://<API>.<region>.amazonaws.com/update
+```
+Request parameters:
+```markdown
+- Required:`orderid` The unique identifier of your order. Two orders cannot have the same orderid
+- Required:`status` false = order is not accepted, true = order is accepted
 ```
 In the body of your request, send the following payload:
 ```shell
